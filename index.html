@@ -14,20 +14,31 @@
 <body>
 
     <form>
-        Value 1: <input type="text" id="value1">
-        Value 2: <input type="text" id="value2">
-        Operator:
-        <select id="operator">
+        Value 1: <input type="text" id="value1" onkeyup="inputnumber(this)">
+        Value 2: <input type="text" id="value2" onkeyup="inputnumber(this)">
+
+        <button type="button" onclick='calc("add")'>Add</button>
+        <button type="button" onclick='calc("min")'>Minus</button>
+        <button type="button" onclick='calc("div")'>Divide</button>
+        <button type="button" onclick='calc("mul")'>Multiply</button>
+        <!-- Operator: <select id="operator">
             <option value="add">Add</option>
             <option value="min">Minus</option>
             <option value="div">Divide</option>
             <option value="mul">Multiply</option>
-        </select>
-        <button type="button" onclick="calc()">Calculate</button>
+            </select> -->
+        <!-- <button type="button" onclick="calc()">Calculate</button> -->
+        <button type="button" onclick="del()">Delete</button>
+
     </form>
     <div id="result"></div>
 
 </body>
+<style>
+    .active {
+        background-color: green;
+    }
+</style>
 <script src="main.js"></script>
 
 </html>
